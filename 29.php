@@ -36,7 +36,8 @@
             {
                 $price -= $price * 0.05;
             }
-
+            
+            echo "<h3>Страна: {$_POST['country']} <br/>  Количество дней: {$_POST['days']} <br/> Наличие скидки: " . (key_exists('discount', $_POST) ? 'есть' : 'нет') . "</h3>";
             echo "<h2>Стоимость отдыха: {$price}</h2>";
         }
     }

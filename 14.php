@@ -9,15 +9,15 @@ function func ($numString)
 
     foreach ($numArray as $num) 
     {
-        $tmpCount = 0;
+        $tmpMultiplication = 1;
 
         for ($i = 0; $i < count($numArray); $i++) {
             if ($num != $numArray[$i])
             {
-                $tmpCount += $numArray[$i];
+                $tmpMultiplication *= $numArray[$i];
             }
         }
-        $resultString .= $tmpCount . " ";
+        $resultString .= $tmpMultiplication . " ";
     }
     $resultString = trim($resultString);
 

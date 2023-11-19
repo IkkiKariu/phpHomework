@@ -6,7 +6,7 @@ function findCombinations($numString) {
 
     for ($i = 0; $i < count($numArray) - 1; $i++) {
         for ($j = $i + 1; $j < count($numArray); $j++) {
-            echo "<h3>" . $i . " and " . $j . "<h3>";
+            echo "<h3>" . $numArray[$i] . " and " . $numArray[$j] . "<h3>";
         }
     }
 }

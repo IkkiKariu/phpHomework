@@ -4,11 +4,11 @@ $num = 1;
 if ($num == 1){
     $result = 'Зима';
 }else if ($num == 2){
-    $result = 'Весна';
-}else if ($num == 3){
     $result = 'Лето';
-}else if ($num == 4) {
+}else if ($num == 3){
     $result = 'Осень';
+}else if ($num == 4) {
+    $result = 'Весна';
 }else {
     echo '<h1>invalid \'$num\' variable value!</h1>';
 }

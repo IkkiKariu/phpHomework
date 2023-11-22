@@ -19,7 +19,6 @@ function create_table()
 
     catch(PDOException $e)
     {
-        echo "fuck!@*";
         echo $e;
     }
 }
@@ -53,11 +52,6 @@ class StudentCredentialsRepositoty
         public function ShowAll() : mixed
         {
             return $this->db_connection->query('SELECT * FROM student_credentials;')->fetchAll();
-        }
-
-        public function GetEntry(int $id)
-        {
-            return $this->db_connection->query("SELECT * FROM student_credentials WHERE id={$id};");
         }
 }
 

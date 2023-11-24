@@ -1,18 +1,15 @@
 <?php 
-    if (session_status() != PHP_SESSION_ACTIVE)
+    session_start();
+    
+    if (!key_exists('visited_pages', $_SESSION))
     {
-        session_start();
-
-        $_SESSION['visited_pages'] = array();
-        $_SESSION['user_data'] = array();
+        $_SESSION['visited_pages'] = array();    
     }
+
+    array_push($_SESSION['visited_pages'], $_SERVER['REQUEST_URI']);
 ?>
 
-<?php $_SESSION['visited_pages'][] = $_SERVER['REQUEST_URI']; ?>
-
-<?php var_dump($_SESSION['visited_pages']); ?>
-
 <form action="/88/lastNameForm.php" method="POST">
-    <label>Имя: </label><input type="text" name="firstName"/>
-    <input type="submit" value="Отправить"/>
+    <label>First name: </label><input type="text" name="firstName"/>
+    <input type="submit" value="Send"/>
 </form>
